@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    networks:
+      - traefik
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.library.entrypoints=https
+      - traefik.http.routers.library.rule=Host(`library.senip.fun`)
+      - traefik.http.services.library.loadbalancer.server.port=8000
+      - traefik.http.routers.library.tls=true
+      - traefik.http.routers.library.tls.options=default
+      - traefik.http.routers.library.tls.certresolver=letsEncrypt
+
+networks:
+  traefik:
+    external:
+      name: traefik
