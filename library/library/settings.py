@@ -123,8 +123,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    "library/static",
+    # BASE_DIR / "static",
     "home/static",
     "librarian/static",
     "users/static",
