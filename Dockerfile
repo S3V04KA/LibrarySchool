@@ -9,6 +9,7 @@ COPY . .
 
 WORKDIR /app/library
 
+RUN mkdir -p /app/staticfiles
 ENV STATIC_ROOT=/app/staticfiles
 RUN python manage.py collectstatic --no-input
 
