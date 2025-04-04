@@ -7,4 +7,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["cd", "library", "&&", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+WORKDIR /app/library
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
