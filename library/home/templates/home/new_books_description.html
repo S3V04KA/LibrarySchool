@@ -1,0 +1,28 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/New_books_description.css">
+<div class="container">
+  <div class="header">
+    <a href="{% url 'new_books' %}" class="back-button"><img src="{% static 'home/Icons/icon_back.png' %}" alt="Back"></a>
+    <a class="get-button" href="{% url 'scannerQR_new_get' %}">Получить</a>
+  </div>
+  <div class="book-cover">
+    <img src="{% static 'home/Images/image_book8.png' %}" alt="Обложка книги">
+  </div>
+  <div class="like-button">
+    <button class="heart-button"><img src="{% static 'home/Icons/icon_liked.png' %}"></button>
+  </div>
+  <div class="book-info">
+    <h2>Название</h2>
+    <h2>Автор</h2>
+    <div class="h4">
+      <h4>О книге:</h4>
+      <h4>Описание</h4>
+    </div>
+  </div>
+</div>
+{% endblock content %}

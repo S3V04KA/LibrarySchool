@@ -1,0 +1,29 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/Search_results.css">
+<a href="{% url 'filter_book' %}" class="back-button">
+    <img src="{% static 'home/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div class="container">
+    <div class="content">
+        <div class="book-grid">
+            <a href="{% url 'filter_results_description' %}" class="book-item">
+            <img src="{% static 'home/Images/image_book8.png' %}" alt="Book 1">
+            </a>
+            <a href="{% url 'filter_results_description' %}" class="book-item">
+            <img src="{% static 'home/Images/image_book8.png' %}" alt="Book 2">
+            </a>
+            <a href="{% url 'filter_results_description' %}" class="book-item">
+            <img src="{% static 'home/Images/image_book8.png' %}" alt="Book 3">
+            </a>
+            <a href="% url 'filter_results_description' %}" class="book-item">
+            <img src="{% static 'home/Images/image_book8.png' %}" alt="Book 4">
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

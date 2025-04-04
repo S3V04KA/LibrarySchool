@@ -1,0 +1,32 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/Notifications.css">
+<header>
+  <div class="head1">
+      <a href="{% url 'home' %}" class="back-button">
+        <img src="{% static 'home/Icons/icon_back.png' %}" alt="Icon" class="back_icon">
+      </a>
+  </div>
+</header>
+<div class="head2" >
+    <img src="{% static 'home/Icons/icon_notification.png' %}" alt="Icon" class="icon">
+</div>
+<div class="container0">
+    <div class="container">
+        <div class="notifications">
+            <div class="notification">
+                <span class="title">БИБЛИОТЕКАРЬ</span>
+                <span class="message">у Вас 1 задолженность</span>
+            </div>
+            <div class="notification">
+                <span class="title">БИБЛИОТЕКАРЬ</span>
+                <span class="message">у Вас отсутствуют задолженности</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

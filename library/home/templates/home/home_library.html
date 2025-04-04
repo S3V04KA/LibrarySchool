@@ -1,0 +1,31 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/Mainscreen.css">
+<div class="container">
+    <a href="{% url 'notifications' %}" class="clock1">
+        <img src="{% static 'home/Icons/icon_notification.png' %}" class="clock">
+    </a>
+    <div class="header">
+        <img src="{% static 'home/Images/Logo.png' %}" alt="Логотип школы" class="logo">
+    </div>
+    <div class="info">
+        {% if user.is_authenticated %}
+        <p>{{ user.username }}</p>
+        {% else %}
+       <p><a href="{% url 'users:login' %}">login</a> | <a href="{% url 'users:register' %}">register</a></p>
+        {% endif %}
+    </div>
+    <div class="buttons">
+        <br> <a href="{% url 'about' %}" class="btn1"><img src="{% static 'home/Icons/icon_about.png' %}" alt="Иконка 1">О БИБЛИОТЕКЕ</a>
+        <br> <a href="{% url 'search' %}" class="btn1"><img src="{% static 'home/Icons/icon_search.png' %}" alt="Иконка 2">ПОИСК КНИГИ</a>
+        <br> <a href="{% url 'mylibrary' %}" class="btn1"><img src="{% static 'home/Icons/icon_mylibrary.png' %}" alt="Иконка 3">МОЯ БИБЛИОТЕКА</a>
+    </div>
+    <div class="footer">
+        <a href="{% url 'users:login' %}" class="btn2">ВЫХОД ИЗ УЧЕТНОЙ ЗАПИСИ </a>
+    </div>
+</div>
+{% endblock content %}

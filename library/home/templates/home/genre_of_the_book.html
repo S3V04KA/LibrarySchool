@@ -1,0 +1,75 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/Genres.css">
+<a href="{% url 'filter_book' %}" class="back-button">
+    <img src="{% static 'home/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div class="container">
+    <div class="h2">
+        <h2>ЖАНР</h2>
+    </div>
+    <form id="subject-form">
+        <label>
+            <input type="radio" name="subject" value="Басня"> БАСНЯ
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Поэзия"> ПОЭЗИЯ
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Документальная литература"> ДОКУМЕНТАЛЬНАЯ ЛИТЕРАТУРА
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Древнерусская литература"> ДРЕВНЕРСКАЯ ЛИТЕРАТУРА
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Исторические романы"> ИСТОРИЧЕСКИЕ РОМАНЫ
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Биография"> БИОГРАФИЯ
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Рассказ"> РАССКАЗ
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Фольклор"> ФОЛЬКЛОР
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Научная литература"> НАУЧНАЯ ЛИТЕРАТУРА
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Научная фантастика"> НАУЧНАЯ ФАНТАСТИКА
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Фэнтези"> ФЭНТЕЗИ
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value=" Ужасы"> УЖАСЫ
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Повесть"> ПОВЕСТЬ
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Поэма"> ПОЭМА
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Психология"> ПСИХОЛОГИЯ
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Роман"> РОМАН
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Сатира"> САТИРА
+        </label><br>
+        <label>
+            <input type="radio" name="subject" value="Учебник"> УЧЕБНИК
+        </label><br>
+        <div class="apply">
+            <button class="apply-button">ПРИМЕНИТЬ</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends "librarian/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'librarian/css/Add.css' %}">
+<a href="{% url 'management' %}" class="back-button">
+    <img src="{% static 'librarian/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div class="h1">
+    <h2>
+        ДОБАВЛЕНИЕ КНИГИ
+    </h2>
+</div>
+<div class="container0"><div class="container">
+    <div class="content">
+        <img src="{% static 'librarian/Images/image_book8.png' %}" alt="Обложка книги" class="book-cover">
+        <div class="text">
+            <form method="post" class="form_django">
+                {% csrf_token %}
+                <div>
+                    <b><h4>НАЗВАНИЕ</h4></b>
+                    {{ form.title }}
+                </div>
+                <div>
+                    <b><h4>АВТОР</h4></b>
+                    {{ form.author }}
+                </div>
+                <div>
+                    <b><h4>ЖАНР КНИГИ</h4></b>
+                    {{ form.genre }}<br>
+                </div>
+                <div>
+                    <b><h4>ОПИСАНИЕ КНИГИ</h4></b>
+                    {{ form.description }}<br>
+                </div>
+                <div>
+                    <b><h5>КОЛИЧЕСТВО ЭКЗЕМПЛЯРОВ</h5></b>
+                    {{ form.number_of_copies }}<br>
+                </div>
+                <div>
+                    <b><h5>ДАТА ПОСТУПЛЕНИЯ</h5></b>
+                    {{ form.date }}<br>
+                </div>
+                <span>{{ error }}</span>
+                <button class="save-button">СОХРАНИТЬ</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock content %}

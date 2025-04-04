@@ -1,0 +1,31 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/Filter.css">
+<a href="{% url 'search' %}" class="back-button">
+    <img src="{% static 'home/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div class="h1">
+    <h2>
+        ФИЛЬТРЫ
+    </h2>
+</div>
+<div class="content">
+    <h2>ГОД ИЗДАНИЯ</h2>
+    <div class="slider-container">
+        <input type="range" min="1800" max="2025" value="1800" class="slider">
+        <div class="year1">
+            <span class="year"><h4>1800</h4></span>
+            <span class="year"><h4>2025</h4></span>
+        </div>
+    </div>
+    <a href="{% url 'genre_of_the_book' %}" class="filter-button"><h3>ЖАНР</h3></a>
+    <a href="{% url 'academic_disciplines' %}" class="filter-button"><h3>ПРЕДМЕТ</h3></a>
+</div>
+<div class="apply">
+    <a href="{% url 'filter_search_results' %}" class="apply-button">ПРИМЕНИТЬ</a>
+</div>
+{% endblock content %}

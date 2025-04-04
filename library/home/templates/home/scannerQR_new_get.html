@@ -1,0 +1,25 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/QR_Code_New_books_description.css">
+<body>
+    <a href="{% url 'new_books_description' %}" class="back-button">
+        <img src="{% static 'home/Icons/icon_back.png' %}" alt="Back">
+    </a>
+    <div class="container0">
+    <div class="container">
+        <div class="content">
+            <img src="{% static 'home/Images/image_book8.png' %}" alt="Обложка книги" class="book-cover">
+            <div class="text">
+                <h2>НАЗВАНИЕ</h2>
+                <h2>АВТОР</h2>
+            </div>
+        </div>
+        <img src="{% static 'home/Images/QR_Code.png' %}" alt="QR-код" class="qr-code">
+    </div>
+    </div>
+</body>
+{% endblock content %}

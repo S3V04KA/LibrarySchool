@@ -1,0 +1,21 @@
+{% extends "librarian/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'librarian/css/Mainscreen2.css' %}">
+<div class="container">
+        <div class="header">
+            <img src="{% static 'librarian/Images/Logo.png' %}" alt="Логотип школы" class="logo">
+        </div>
+        <div class="buttons">
+            <br> <a href="{% url 'management' %}" class="btn1">УПРАВЛЕНИЕ ФОНДОМ</a>
+            <br> <a href="{% url 'control' %}" class="btn1">МОНИТОРИНГ ВЫДАЧИ</a>
+            <br> <a href="{% url 'debts' %}" class="btn1">УПРАВЛЕНИЕ ЗАДОЛЖЕННОСТЯМИ</a>
+        </div>
+        <div class="footer">
+            <button class="btn3">ВЫХОД ИЗ УЧЕТНОЙ ЗАПИСИ</button>
+        </div>
+</div>
+{% endblock content %}

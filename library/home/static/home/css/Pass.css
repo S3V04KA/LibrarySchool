@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #84D9FF, #282F62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 90vw;
+    height: 97vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.back-button {
+    display: flex;
+    justify-content: flex-start;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.back-button img {
+    width: 30px;
+    height: 30px;
+}
+.pass-button {
+    background: linear-gradient(to left, #84D9FF, #282F62);
+    text-decoration: none;
+    color:#FFEEBA;
+    border: none;
+    padding: 4px 30px;
+    margin: 10px 0;
+    border-radius: 25px;
+    font-size: 18px;
+}
+.book-cover {
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.book-cover img {
+    width: 50vw;
+    border-radius: 20px;
+}
+
+.book-info {
+    margin-top: -2vh;
+    color: 000000;
+}
+h4{
+    display: flex;
+    justify-content: flex-start;
+
+}
+.like-button {
+    display: flex;
+    justify-content: flex-end;
+}
+.heart-button {
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

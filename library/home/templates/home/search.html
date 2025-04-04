@@ -1,0 +1,37 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/Search.css">
+<a href="{% url 'home' %}" class="back-button">
+    <img src="{% static 'home/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div class="container">
+    <header>
+        <img src="{% static 'home/Icons/icon_searchbar.png' %}" class="icon_searchbar" alt="icon_searchbar">
+        <input type="text" class="search-bar" placeholder="     ПОИСК">
+        <a href="{% url 'filter_book' %}" class="filter">
+            <img src="{% static 'home/Icons/icon_filter.png' %}" alt="filter">
+        </a>
+    </header>
+    <div class="content">
+        <a href="{% url 'new_books' %}" class="new-books">НОВИНКИ</a>
+        <div class="book-grid">
+            <a href="{% url 'get_book_search_description' %}" class="book-item">
+                <img src="{% static 'home/Images/image_book1.png' %}" alt="Book 1">
+            </a>
+            <a href="{% url 'get_book_search_description' %}" class="book-item">
+                <img src="{% static 'home/Images/image_book2.png' %}" alt="Book 2">
+            </a>
+            <a href="{% url 'get_book_search_description' %}" class="book-item">
+                <img src="{% static 'home/Images/image_book3.png' %}" alt="Book 3">
+            </a>
+            <a href="{% url 'get_book_search_description' %}" class="book-item">
+                <img src="{% static 'home/Images/image_book4.png' %}" alt="Book 4">
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

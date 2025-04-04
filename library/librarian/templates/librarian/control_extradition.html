@@ -1,0 +1,18 @@
+{% extends "librarian/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'librarian/css/Monitoring.css' %}">
+<a href="{% url 'main' %}" class="back-button">
+    <img src="{% static 'librarian/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div class="content">
+    <h2>МОНИТОРИНГ ИЗДАНИЯ</h2>
+    <a href="{% url 'initials' %}" class="button"><h3>ФИО УЧЕНИКА</h3></a>
+    <a href="{% url 'date_of_issue' %}" class="button"><h3>ДАТА ВЫДАЧИ</h3></a>
+    <a href="{% url 'author_choice' %}" class="button"><h3>ПО АВТОРУ</h3></a>
+    <a href="{% url 'class_choice' %}" class="button"><h3>ПО КЛАССУ</h3></a>
+</div>
+{% endblock content %}

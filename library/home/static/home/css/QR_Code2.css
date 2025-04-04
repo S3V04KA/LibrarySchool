@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #84D9FF, #282F62);
+}
+
+.container0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    margin-top: 5vh;
+    width: 80%;
+    max-width: 90vw;
+    max-height: 90vh ;
+    text-align: center;
+}
+
+.back-button {
+    display: flex;
+    justify-content: flex-start;
+    background-color: transparent;
+    margin-left: 3vw;
+    margin-top: 3vh;
+    border: none;
+    cursor: pointer;
+}
+.back-button img {
+    width: 30px;
+    height: 30px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.book-cover {
+    width: 40vw;
+    margin-right: 20px;
+}
+
+.text h2 {
+    margin: 0;
+    font-size: 24px;
+    color: 000000;
+}
+
+.qr-code {
+    width: 70vw;
+    margin-top: 50px;
+}

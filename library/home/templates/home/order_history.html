@@ -1,0 +1,35 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/History.css">
+<a href="{% url 'mylibrary' %}" class="back-button">
+    <img src="{% static 'home/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div class="header">
+  <div class="logo">
+    <img src="{% static 'home/Icons/icon_History.png' %}" alt="Иконка 3">
+  </div>
+  <h2>ИСТОРИЯ ЗАКАЗОВ</h2>
+</div>
+<div class="container">
+  <div class="content">
+    <div class="book-grid">
+      <a href="{% url 'return_the_book' %}" class="book-item">
+        <img src="{% static 'home/Images/image_book1.png' %}" alt="Book 1">
+      </a>
+      <a href="{% url 'return_the_book' %}" class="book-item">
+        <img src="{% static 'home/Images/image_book2.png' %}" alt="Book 2">
+      </a>
+      <a href="{% url 'return_the_book' %}" class="book-item">
+        <img src="{% static 'home/Images/image_book3.png' %}" alt="Book 3">
+      </a>
+      <a href="{% url 'return_the_book' %}" class="book-item">
+        <img src="{% static 'home/Images/image_book4.png' %}" alt="Book 4">
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

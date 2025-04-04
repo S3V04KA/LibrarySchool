@@ -1,0 +1,84 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/Subjects.css">
+<a href="{% url 'filter_book' %}" class="back-button">
+    <img src="{% static 'home/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div class="container">
+  <div class="h2">
+    <h2>ПРЕДМЕТЫ</h2>
+  </div>
+  <form id="subject-form">
+    <label>
+      <input type="radio" name="subject" value="Русский язык"> РУССКИЙ ЯЗЫК
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Литература"> ЛИТЕРАТУРА
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Математика"> МАТЕМАТИКА
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Физика"> ФИЗИКА
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Химия"> ХИМИЯ
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Биология"> БИОЛОГИЯ
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="География"> ГЕОГРАФИЯ
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="История"> ИСТОРИЯ
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Обществознание"> ОБЩЕСТВОЗНАНИЕ
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Иностранный язык"> ИНОСТРАННЫЙ ЯЗЫК
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Музыка"> МУЗЫКА
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Изобразительное искусство"> ИЗОБРАЗИТЕЛЬНОЕ ИСКУССТВО
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Технология"> ТЕХНОЛОГИЯ
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Физическая культура"> ФИЗИЧЕСКАЯ КУЛЬТУРА
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Экономика"> ЭКОНОМИКА
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Право"> ПРАВО
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Астрономия"> АСТРОНОМИЯ
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Логика"> ЛОГИКА
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Психология"> ПСИХОЛОГИЯ
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Окружающий мир"> ОКРУЖАЮЩИЙ МИР
+    </label><br>
+    <label>
+      <input type="radio" name="subject" value="Основы безопасности и защиты Родины"> ОСНОВЫ БЕЗОПАСНОСТИ И ЗАЩИТЫ РОДИНЫ
+    </label><br>
+    <div class="apply">
+      <button class="apply-button">ПРИМЕНИТЬ</button>
+    </div>
+  </form>
+</div>
+{% endblock content %}

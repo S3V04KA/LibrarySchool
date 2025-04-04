@@ -1,0 +1,30 @@
+{% extends "home/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/New_books.css">
+<a href="{% url 'search' %}" class="back-button">
+    <img src="{% static 'home/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div>
+  <a class="new-books">НОВИНКИ</a>
+</div>
+<div class="content">
+    <div class="book-grid">
+      <a href="{% url 'new_books_description' %}" class="book-item">
+          <img src="{% static 'home/Images/image_book1.png' %}" alt="Book 1">
+      </a>
+      <a href="{% url 'new_books_description' %}" class="book-item">
+          <img src="{% static 'home/Images/image_book2.png' %}" alt="Book 2">
+      </a>
+      <a href="{% url 'new_books_description' %}" class="book-item">
+          <img src="{% static 'home/Images/image_book3.png' %}" alt="Book 3">
+      </a>
+      <a href="{% url 'new_books_description' %}" class="book-item">
+          <img src="{% static 'home/Images/image_book4.png' %}" alt="Book 4">
+    </a>
+  </div>
+</div>
+{% endblock content %}

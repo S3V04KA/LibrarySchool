@@ -1,0 +1,12 @@
+{% extends "users/layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/Login.css">
+<div class="container">
+    <h1>Добро пожаловать!</h1>
+
+<p>Вы успешно зарегистрировались на сайте! Для входа в систему необходимо авторизоваться!
+<a href="{% url 'users:login' %}">Ссылка на авторизацию</a>
+</p>
+</div>
+{% endblock %}

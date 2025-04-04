@@ -1,0 +1,14 @@
+{% extends "users/layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/home/css/Login.css">
+<div class="container">
+    <h1>АВТОРИЗАЦИЯ</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><button type="submit">Войти</button></p>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "librarian/layout.html" %}
+{% block title %}
+{{ title }}
+{% endblock title %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'librarian/css/Pupil.css' %}">
+<a href="{% url 'control' %}" class="back-button">
+    <img src="{% static 'librarian/Icons/icon_back.png' %}" alt="Back">
+</a>
+<div class="h1">
+    <h2>
+      НАПИШИТЕ ФИО УЧЕНИКА
+    </h2>
+</div>
+<div class="content">
+    <input placeholder="Фамилия" class="input"></input>
+    <input placeholder="Имя" class="input"></input>
+    <input placeholder="Отчество" class="input"></input>
+</div>
+<div class="apply">
+    <button class="apply-button">НАЙТИ</button>
+</div>
+{% endblock content %}
