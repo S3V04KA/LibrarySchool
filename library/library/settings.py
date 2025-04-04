@@ -122,6 +122,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    "library/static",
+    "home/static",
+    "librarian/static",
+    "users/static",
 ]
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # Путь для сбора статических файлов
